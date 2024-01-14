@@ -1,0 +1,327 @@
+<!-- Cart.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Shopping Cart - Basketball Superstore</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="cart.css"> <!-- Add a separate CSS file for cart styles if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="storelogo.png" alt="Basketball Superstore Logo">
+        <h1>Basketball Superstore</h1>
+    </header>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('ja-morant-dunk-brooklyn-nets-game.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /* Add any additional styles as needed */
+    header {
+        display: flex;
+        justify-content: flex-start; /* Align items to the start (left) */
+        align-items: center;
+        padding: 20px;
+        background-color: #333; /* Adjust the background color as needed */
+    }
+
+    header h1 {
+        color: #fff; /* Text color for the logo */
+        margin: 0;
+        margin-left: 10px; /* Add margin to separate the logo from the text */
+    }
+
+    header img {
+        max-height: 50px; /* Adjust the max height of the logo as needed */
+        /* You can also add other styles, such as margin, padding, etc. */
+    }
+    footer {
+        background-color: #333; /* Adjust the background color as needed */
+        padding: 10px; /* Adjust the padding to make it thinner */
+        color: #fff; /* Text color for the footer */
+        text-align: center;
+    }
+</style>
+    <nav>
+        <a href="ShuajbMuharrem1.html">Home</a>
+        <a href="newarrivals.html">New Arrivals</a>
+        <a href="Men's.html">Men's</a>
+        <a href="Youth.html">Youth</a>
+        <a href="Accessories.html">Accessories</a>
+        <a href="ContactUs.html" onclick="showContactModal()">Contact Us</a>
+        <a href="Cart.html" onclick="showCart()">Cart <span class="sh-m-cart-badge">0</span></a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="OurStaff.html">Our Staff</a>
+        <a href="AllProducts.html">All Products</a>
+        <div class="sh-m-cart-section">
+            <!-- Cart items will be dynamically added here using JavaScript -->
+        </div>
+    </nav>
+
+    <div class="sh-m-container">
+        <h2>Shopping Cart</h2>
+        <div class="sh-m-cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    <div class="sh-m-modal-container" id="modalContainer"></div>
+
+    <footer>
+        <div class="sh-m-contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: shuajb.muharremi@gmail.com</p>
+            <p>Phone: +383 49 569-361</p>
+        </div>
+    
+        <div class="sh-m-social-media">
+            <h3>Follow Us</h3>
+            <a href="https://twitter.com/bballsuperstore" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/shuajbmuharremi" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/shuajbmuharremii" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="Cart.js" defer></script> <!-- Link to your cart.js file -->
+</body>
+</html>
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #d55b27;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+  
+  .hero {
+    background-image: url('ja-morant-dunk-brooklyn-nets-game-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .featured-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .featured-product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+    width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-product:hover {
+    transform: scale(1.05);
+  }
+  
+  .featured-product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .featured-product-body {
+    padding: 15px;
+  }
+  
+  h2 {
+    color: #ff6600;
+  }
+  
+  button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff8533;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+  .contact-info,
+  .social-media {
+    text-align: center;
+  }
+  
+  .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+  }
+  
+  .social-media a:hover {
+    color: #ff6600;
+  }
+  
+  /* Media Query for screens smaller than 768px (typical mobile devices) */
+  @media only screen and (max-width: 768px) {
+    .hero {
+      height: 300px;
+    }
+  
+    .featured-products {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .featured-product {
+      width: 100%;
+    }
+  }
+  
+
+
+  // Cart.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function displayCartItems() {
+        const cartItemsContainer = document.getElementById('cartItems');
+        cartItemsContainer.innerHTML = '';
+
+        if (cart.length === 0) {
+            const emptyCartMessage = document.createElement('p');
+            emptyCartMessage.textContent = 'Your cart is empty.';
+            cartItemsContainer.appendChild(emptyCartMessage);
+        } else {
+            cart.forEach(item => {
+                const cartItemElement = createCartItemElement(item);
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+        }
+    }
+
+    function createCartItemElement(item) {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+
+        const productImage = document.createElement('img');
+        productImage.src = item.image;
+        productImage.alt = item.name;
+
+        const itemInfo = document.createElement('div');
+        itemInfo.classList.add('cart-item-info');
+
+        const itemName = document.createElement('h3');
+        itemName.textContent = item.name;
+
+        const itemPrice = document.createElement('p');
+        itemPrice.textContent = `$${item.price.toFixed(2)}`;
+
+        const itemQuantity = document.createElement('p');
+        itemQuantity.textContent = `Quantity: ${item.quantity}`;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.onclick = function () {
+            removeFromCart(item.id);
+        };
+
+        itemInfo.appendChild(itemName);
+        itemInfo.appendChild(itemPrice);
+        itemInfo.appendChild(itemQuantity);
+
+        cartItem.appendChild(productImage);
+        cartItem.appendChild(itemInfo);
+        cartItem.appendChild(removeButton);
+
+        return cartItem;
+    }
+
+    function removeFromCart(productId) {
+        const index = cart.findIndex(item => item.id === productId);
+
+        if (index !== -1) {
+            cart.splice(index, 1);
+            updateLocalStorage();
+            displayCartItems();
+        }
+    }
+
+    function updateLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Display cart items on page load
+    displayCartItems();
+});
+  
